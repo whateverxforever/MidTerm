@@ -32,7 +32,7 @@ router.get('/:code', (req, res) => {
     }
     console.log(req.url);
 
-    returnPage(req.secure.user, req.params.code)
+    returnPage(req.session.user, req.params.code)
         .then((data) => {
             res.render('coursePage', data)
         })
