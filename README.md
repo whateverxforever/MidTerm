@@ -11,12 +11,12 @@ Using the plus button you can access the teacher-posts room
 
 To run the website on your local system, first download the repository.
 After the folder has been downloaded do the following: <br>
-cd repo-folder <br>
-npm run test
+-cd repo-folder <br>
+-npm run test
 
 ### Prerequisites
 
-The working of this website requires an active internet connection along with NodeJS on your system
+The working of this website requires an active internet connection along with NodeJS on your system. Don't change the .env files
 
 
 ## Built With
