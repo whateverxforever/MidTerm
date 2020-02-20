@@ -1,0 +1,30 @@
+<style>
+    .card-action:hover {
+        background-color: #1976d2;
+        color: #fff;
+
+    }
+</style>
+
+
+<div class="col s4">
+    <div class="card blue">
+        <div class="card-content white-text">
+            <span class="card-title"><b>{{code}}</b></span>
+            <p style="font-size: 18px;">{{title}} <br> Faculty: {{faculty}}</p>
+        </div>
+        <div class="divider"></div>
+        <div class="card-action">
+            {{#if user.isFaculty}}
+            {{!-- Show nothing --}}
+            <h1>Hello</h1>
+            {{else}}
+            {{#if user}}
+            <a href="user/subscribe/{{code}}" class="white-text waves-effect waves-light">Subscribe <i
+                    class="material-icons white-text right" style="cursor: pointer; margin: none">add_circle</i></a>
+            {{/if}}
+            {{/if}}
+
+        </div>
+    </div>
+</div>

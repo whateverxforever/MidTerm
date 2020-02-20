@@ -1,0 +1,104 @@
+<div style="display:flex;">
+    <div class="big" style="width:60vw; height:91vh; background-color:#42a5f5;">
+        <div>
+            <div class="container white-text" style="margin-top:20vh">
+                <div style="border-bottom: white 1px solid;">
+
+                    {{#if user}}
+                    <span class="tracking-in-expand" style="font-size: 24px;">Hey there</span>
+                    <h1 class="tracking-in-expand" style="margin-top: 0px;">{{user.name}}!</h3>
+                        <h3 class="tracking-in-expand" style="margin-top: 0px;">Welcome back to FlexiCourses <span
+                                class="blink-1"> |</span>
+                        </h3>
+
+                        {{else}}
+                        <h1 class="tracking-in-expand">FlexiCourses</h1>
+                        <h3 class="tracking-in-expand">One platform for all your needs<span class="blink-1">|</span>
+                        </h3>
+                        {{/if}}
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div style="width:40vw; height:91vh; background-color:#42a5f5;">
+        <img src="https://www.pinclipart.com/picdir/big/150-1505285_try-auvious-education-with-your-team-team-isometric.png"
+            alt="" style="width: 30vw; height: 75vh; padding-top: 30px">
+
+    </div>
+</div>
+
+
+<style>
+    .blink-1 {
+        -webkit-animation: blink-1 2s infinite both;
+        animation: blink-1 2s infinite both;
+    }
+
+    .tracking-in-expand {
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+
+    @-webkit-keyframes blink-1 {
+
+        0%,
+        50%,
+        100% {
+            opacity: 1;
+        }
+
+        25%,
+        75% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes blink-1 {
+
+        0%,
+        50%,
+        100% {
+            opacity: 1;
+        }
+
+        25%,
+        75% {
+            opacity: 0;
+        }
+    }
+
+
+    @-webkit-keyframes tracking-in-expand {
+        0% {
+            letter-spacing: -0.5em;
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 0.6;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes tracking-in-expand {
+        0% {
+            letter-spacing: -0.5em;
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 0.6;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>

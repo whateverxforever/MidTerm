@@ -1,0 +1,51 @@
+<div class="container" style="margin-top: 50px;">
+    <h3 class="blue-text text-darken-2">Signup Here!</h3>
+    <div class="row" style="margin-top: 35px;">
+        {{#if error}}
+        {{#each error as |e|}}
+        <blockquote>
+            <h6 class="red-text">{{e.msg}}</h6>
+        </blockquote>
+        {{/each}}
+        {{/if}}
+        <form class="col s12" method="POST">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="First Name" id="first_name" name="first_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Last Name" id="last_name" name="last_name" type="text" class="validate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Registeration ID" id="reg" name="reg" type="text" class="validate">
+                </div>
+                <div class="input-field col">
+                    <label>
+                        <input type="checkbox" name="faculty" class="filled-in" value="true" onclick="" />
+                        <span>Faculty</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Email" id="email" name="email" type="text" class="validate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Password" id="password" name="password" type="password" class="validate">
+
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn waves-effect blue lighten-2 waves-light" type="submit" name="action">Signup
+                    <i class="material-icons right">check</i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>

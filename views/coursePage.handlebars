@@ -1,0 +1,85 @@
+<div>
+
+    <div style="display: flex;">
+        <div class="blue lighten-3 white-text" style="width: 25vw;height: 91vh">
+
+            <div class="blue darken-1" style="padding:5px; padding-left:20px">
+                <h5>Posts Page</h5>
+            </div>
+            <div style="margin-top: 50px; padding-left:55px">
+                <div class="card-panel blue darken-1" style="width:17vw">
+                    <h4>Course details</h4>
+                    <div style="font-size: 18px;padding: 20px">
+                        <i class="large material-icons" style="margin: 0px 0px 30px 40px">account_circle</i> <br>
+                        <h6>Course Code:</h6>
+                        <span> <b>{{posts.[0].course}}</b></span> <br>
+                        <h6>Course Faculty:</h6>
+                        <span> <b>{{trainer.name}}</b></span> <br>
+
+                    </div>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        <div class="pink lighten-5" style="width: 75vw;height: 91vh; overflow: auto; overflow-x: hidden">
+            <div class="col s8" style="padding-left: 80px; padding-top:30px">
+                {{#if posts}}
+                {{#each posts as |post|}}
+                {{> coursePost post='post' user='user'}}
+                {{/each}}
+                {{else}}
+                <h3> No posts have been added yet!</h3>
+                {{/if}}
+
+            </div>
+        </div>
+    </div>
+
+    {{#if user.isFaculty}}
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large pulse red modal-trigger" href="#modal1">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+    </div>
+    {{/if}}
+
+
+
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>New Post</h4>
+            <div class="row">
+                <form class="col s12" method="POST">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="first_name" type="text" name="title" class="validate">
+                            <label for="first_name">Title</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" name="body" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Message</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script>
+
+    var elem = document.querySelector('.modal');
+    var instance = M.Modal.init(elem);
+</script>

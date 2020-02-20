@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{!-- materialize-css --}}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>{{ title }}</title>
+</head>
+
+
+<body>
+
+
+
+    <nav class="blue lighten-1">
+        <div class="nav-wrapper" style="margin-left:5rem;margin-right:5rem;">
+            <a href="/" class="brand-logo">FlexiCourses</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="http://localhost:5000/course">Courses</a></li>
+                {{#if user.isFaculty}}
+                <li><a href="/course/add">Add Course</a></li>
+                {{/if}}
+                {{#if user}}
+                <li><a href="/user/profile">Profile</a></li>
+                <li><a href="/user/logout">Logout</a></li>
+                {{else}}
+                <li><a href="/user/login">Login</a></li>
+
+                {{/if}}
+            </ul>
+        </div>
+    </nav>
+
+
+    {{{ body }}}
+
+
+</body>
+
+</html>

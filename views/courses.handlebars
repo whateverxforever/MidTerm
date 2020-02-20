@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Courses</h1>
+    <div class=" row">
+
+        {{#each courses as |course|}}
+        {{> courseCard course='course' user='user'}}
+        {{/each}}
+
+    </div>
+</div>
+
+<script>
+    if ("{{message}}" == "Success!") {
+        M.toast({ html: '<b>{{message}}</b> <i class="material-icons right">check</i>' })
+    }
+    else if ("{{message}}") {
+        M.toast({ html: '<b>{{message}}</b> <i class="material-icons right">priority_high</i>' })
+
+    }
+</script>

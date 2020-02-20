@@ -1,0 +1,60 @@
+<style>
+    .collection-item:hover {
+        z-index: 100;
+        background: #25bcff;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+</style>
+
+<div class="row">
+    <div class="col s8">
+        <div class="container">
+            <h3>Welcome back, {{user.name}}!</h3>
+            <br>
+            {{#if user.isFaculty}}
+            <h5>Courses being taught by you</h5>
+            {{else}}
+            <h5>Currently ongoing courses</h5>
+
+            {{/if}}
+            <ul class="collection">
+                {{#each user.courses as |user_course|}}
+                <li class="collection-item">{{user_course}}
+                    <a href="/user/remove/{{user_course}}">
+                        <i class="material-icons red-text right" style="cursor: pointer">delete</i>
+                    </a>
+                    <a href="/posts/{{user_course}}">
+                        <i class="material-icons green-text right" style="cursor: pointer">add_circle</i>
+
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="col s4">
+
+
+        <div class="col s7" style="margin-top: 100px;">
+            <div class="card-panel blue lighten-3">
+                <h4>Your, profile</h4>
+                <div style="font-size: 18px;padding: 20px">
+                    <i class="large material-icons" style="margin: 0px 0px 30px 30px">account_circle</i> <br>
+                    <span>{{user.name}}</span> <br>
+                    <span>{{user.id}}</span> <br>
+                    <span>{{user.email}}</span>
+                </div>
+                </span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    if ("{{msg}}") {
+        M.toast({ html: '<b>Course removed!</b> <i class="material-icons right">check</i>' })
+    }
+</script>
