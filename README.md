@@ -1,5 +1,6 @@
 # FlexiCourses
- Mid-Term project for PayPal VAP. FlexiCourses is a platform for both students and teachers. Student can subscribe to the courses they like, teachers can post courses and post course materials/messages for the subscribed students.
+Mid-Term project for PayPal VAP. FlexiCourses is a platform for both students and teachers. Student can subscribe to the courses they like, teachers can post courses and post course materials/messages for the subscribed students.
+Using the plus button you can access the teacher-posts room
  
 ## Getting Started
 
@@ -22,7 +23,7 @@ The working of this website requires an active internet connection along with No
 
 ## Authors
 
-* **Gaurav Acharya** -  - [whateverxforever](https://https://github.com/whateverxforever/)
+* **Gaurav Acharya** -  - [whateverxforever](https://https://github.com/whateverxforever/)*
 
 
 ## License
