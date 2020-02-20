@@ -24,7 +24,7 @@ The working of this website requires an active internet connection along with No
 
 ## Authors
 
-* **Gaurav Acharya** -  - [whateverxforever](https://https://github.com/whateverxforever/)*
+* **Gaurav Acharya** -  - [whateverxforever](https://https://github.com/whateverxforever/)
 
 
 ## License
