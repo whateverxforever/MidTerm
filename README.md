@@ -2,6 +2,8 @@
 
 ![Home-page](https://github.com/whateverxforever/MidTerm/blob/master/images/coverpage.png)
 <br><br>
+Check out the website: https://pacific-headland-75021.herokuapp.com/
+<br>
 Mid-Term project for PayPal VAP. FlexiCourses is a platform for both students and teachers. Student can subscribe to the courses they like, teachers can post courses and post course materials/messages for the subscribed students.
 Using the plus button you can access the teacher-posts room
 <br><br>
