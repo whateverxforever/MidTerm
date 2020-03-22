@@ -151,7 +151,7 @@ router.post('/login', async (req, res) => {
         req.session.user = user;
         console.log(req.session.user.id);
 
-        res.redirect('http://localhost:5000/');
+        res.redirect('/');
     } catch (error) {
         res.status(500).json(error);
     }
